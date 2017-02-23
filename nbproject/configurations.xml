@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f4" displayName="Eye_Detection" projectFiles="true">
+      <itemPath>eye_detect.cpp</itemPath>
+      <itemPath>eye_detect.hpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f3" displayName="Find_Word" projectFiles="true">
+      <itemPath>find_word.cpp</itemPath>
+      <itemPath>find_word.hpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="f1" displayName="Lip_Tracking" projectFiles="true">
+      <itemPath>HaarCascadeObjectDetector.cpp</itemPath>
+      <itemPath>HaarCascadeObjectDetector.h</itemPath>
+      <itemPath>ObjectDetector.h</itemPath>
+      <itemPath>imageProcess.cpp</itemPath>
+      <itemPath>imageProcess.hpp</itemPath>
+      <itemPath>lipTracking.hpp</itemPath>
+      <itemPath>param.hpp</itemPath>
+      <itemPath>poiDetection.cpp</itemPath>
+      <itemPath>poiDetection.hpp</itemPath>
+      <itemPath>tracking.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f2" displayName="Neural_Net" projectFiles="true">
+      <itemPath>Misc.h</itemPath>
+      <itemPath>NNController.cpp</itemPath>
+      <itemPath>NNController.h</itemPath>
+      <itemPath>NeuralNet.cpp</itemPath>
+      <itemPath>NeuralNet.h</itemPath>
+      <itemPath>Neuron.cpp</itemPath>
+      <itemPath>Neuron.h</itemPath>
+      <itemPath>NeuronLayer.cpp</itemPath>
+      <itemPath>NeuronLayer.h</itemPath>
+      <itemPath>header.h</itemPath>
+      <itemPath>initializeNN.cpp</itemPath>
+      <itemPath>initializeNN.hpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>/../../../../../opencv-2.4.3/include</pElem>
+            <pElem>/../../../../../MinGW/lib</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/../../../../../opencv-2.4.3/release/lib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibFileItem>../../../../../MinGW/lib/libwinmm.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_calib3d243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_contrib243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_core243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_features2d243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_flann243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_gpu243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_highgui243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_imgproc243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_legacy243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_ml243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_nonfree243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_objdetect243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_photo243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_stitching243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_ts243.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_video243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_videostab243.dll.a</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="HaarCascadeObjectDetector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="HaarCascadeObjectDetector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Misc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NNController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NNController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NeuralNet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NeuralNet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Neuron.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Neuron.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NeuronLayer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NeuronLayer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ObjectDetector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="eye_detect.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="eye_detect.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="find_word.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="find_word.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imageProcess.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="imageProcess.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="initializeNN.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="initializeNN.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lipTracking.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="param.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="poiDetection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="poiDetection.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tracking.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="HaarCascadeObjectDetector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="HaarCascadeObjectDetector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Misc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NNController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NNController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NeuralNet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NeuralNet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Neuron.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Neuron.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NeuronLayer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NeuronLayer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ObjectDetector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="eye_detect.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="eye_detect.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="find_word.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="find_word.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="imageProcess.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="imageProcess.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="initializeNN.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="initializeNN.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lipTracking.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="param.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="poiDetection.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="poiDetection.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tracking.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

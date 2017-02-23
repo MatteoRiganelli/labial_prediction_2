@@ -1,0 +1,10 @@
+0 viseme0
+1 viseme1
+2 viseme2
+3 viseme3
+4 viseme4
+5 viseme5
+6 viseme6
+7 viseme7
+8 viseme8
+9 viseme9

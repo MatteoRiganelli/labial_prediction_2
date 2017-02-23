@@ -1,0 +1,1 @@
+Dopo aver addestrato la rete neurale e importato il file "pesi.txt" il programma è pronto per funzionare in maniera autonoma.
