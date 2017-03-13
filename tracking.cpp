@@ -194,7 +194,7 @@ int lipTracking()
                 
             }
         }
-                    if(cattura && framenumber % 10 == 0){
+                    if(cattura && framenumber % 8 == 0){
                     photocount++; // increment image number for each capture
                     imagename = "images/image" + inttostr(photocount) + ".JPEG";
                     imwrite(imagename, croppedImage, compression_params);
@@ -261,11 +261,11 @@ int lipTracking()
                     //VISEMA CLASSIFICATO
                     visemeCode = FW.last_classified_visemes();
                     //visemeCode = classified_visemes.back(); // passo sempre l'ultimo visema classificato
-                    
-                    if((visemeCode==7 || visemeCode==5 || visemeCode==6) && FW.sizeVisemeList() >=4){ // er aggiustare il 7 finale, provare
+                    /*
+                    if((visemeCode==7 || visemeCode==5 || visemeCode==6) && FW.sizeVisemeList() >=5){ // er aggiustare il 7 finale, provare
                         visemeCode = 9;
                     }
-                    
+                    */
                     completeWord = FW.addViseme(visemeCode);
                     cout << "COMPLETE_WORD= " << completeWord << endl;
                     

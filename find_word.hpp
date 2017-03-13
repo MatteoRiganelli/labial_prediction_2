@@ -19,7 +19,7 @@
 #include <list>
 #include <string.h>
 
-#define VISEME_CLOCK 6
+#define VISEME_CLOCK 3 // prima era 6
 
 using namespace std;
 

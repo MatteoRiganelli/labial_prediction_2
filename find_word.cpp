@@ -90,7 +90,7 @@ bool Find_Word::addViseme(int visemeCode)
 }
 */
 
-
+/*
 bool Find_Word::addViseme(int visemeCode)
 // return: true=word complete, false=word uncomplete.
 {
@@ -102,14 +102,14 @@ bool Find_Word::addViseme(int visemeCode)
             visemeList.clear(); 
             return false;
         }
-        /*
-        else if(visemeCode == 7 && visemeList.size()>=3){
-            //DEVE ANCHE FARE classified_visemes.clear();
-            clear_classified_visemes(); // provare
-            visemeList.clear(); 
-            return false;
-        }
-        */
+        
+        //else if(visemeCode == 7 && visemeList.size()>=3){
+        //    //DEVE ANCHE FARE classified_visemes.clear();
+        //    clear_classified_visemes(); // provare
+        //    visemeList.clear(); 
+        //    return false;
+        //}
+        
         else if (visemeCode == 9){
             cout << "fine parola\n";
             visemeList.push_back(visemeCode);
@@ -135,8 +135,48 @@ bool Find_Word::addViseme(int visemeCode)
     }    
     return false;
 }
+*/
 
-/*
+//QUELLA NUOVA
+bool Find_Word::addViseme(int visemeCode)
+// return: true=word complete, false=word uncomplete.
+{
+    
+    if (visemeCode == prevViseme.value)
+    {
+        cout << "PrevPOWER= " << prevViseme.power << endl;
+         cout << "visemeLIST= " << visemeList.size() << endl;
+        prevViseme.power++;
+        if ( prevViseme.value==9 && prevViseme.power>=3 && visemeList.size()>1)
+        // trovata una sequenza di "NEUT" => parola completata
+        {
+            cout << "fine parola\n";
+            visemeList.push_back(visemeCode);
+            return true;
+        }
+    }
+    else
+    {
+        cout << "visema diverso\n";
+        if (visemeList.size()==0)
+        {
+            if ( prevViseme.power>VISEME_CLOCK && prevViseme.value!=9)
+            {
+                cout << "primo visema inserito\n";
+                visemeList.push_back(prevViseme.value);
+            }
+        }        
+        else if (prevViseme.power>VISEME_CLOCK && visemeList[visemeList.size()-1]!=prevViseme.value)
+        {
+            cout << "altro visema inserito\n";
+            visemeList.push_back(prevViseme.value);
+        }
+        prevViseme.value = visemeCode;
+        prevViseme.power = 1;       
+    }    
+    return false;
+}
+/* QUELLA DI PRIMA
 bool Find_Word::addViseme(int visemeCode)
 // return: true=word complete, false=word uncomplete.
 {

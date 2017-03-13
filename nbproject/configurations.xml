@@ -168,6 +168,10 @@
         </cTool>
         <ccTool>
           <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>../../../../../opencv-2.4.3/include</pElem>
+            <pElem>../../../../../MinGW/lib</pElem>
+          </incDir>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
@@ -175,6 +179,32 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>../../../../../opencv-2.4.3/release/lib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_calib3d243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_contrib243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_core243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_features2d243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_flann243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_gpu243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_haartraining_engine.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_highgui243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_imgproc243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_legacy243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_ml243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_nonfree243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_objdetect243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_photo243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_stitching243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_ts243.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_video243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../opencv-2.4.3/release/lib/libopencv_videostab243.dll.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../MinGW/lib/libwinmm.a</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
       <item path="HaarCascadeObjectDetector.cpp" ex="false" tool="1" flavor2="0">
       </item>
