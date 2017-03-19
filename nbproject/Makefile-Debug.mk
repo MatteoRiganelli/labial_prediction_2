@@ -67,47 +67,47 @@ LDLIBSOPTIONS=-L/../../../../../opencv-2.4.3/release/lib ../../../../../MinGW/li
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../MinGW/lib/libwinmm.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../MinGW/lib/libwinmm.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_calib3d243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_calib3d243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_contrib243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_contrib243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_core243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_core243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_features2d243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_features2d243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_flann243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_flann243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_gpu243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_gpu243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_highgui243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_highgui243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_imgproc243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_imgproc243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_legacy243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_legacy243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_ml243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_ml243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_nonfree243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_nonfree243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_objdetect243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_objdetect243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_photo243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_photo243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_stitching243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_stitching243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_ts243.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_ts243.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_video243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_video243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_videostab243.dll.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ../../../../../opencv-2.4.3/release/lib/libopencv_videostab243.dll.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification3 ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/classification4 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/HaarCascadeObjectDetector.o: HaarCascadeObjectDetector.cpp
 	${MKDIR} -p ${OBJECTDIR}

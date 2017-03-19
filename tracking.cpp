@@ -52,6 +52,9 @@ int lipTracking()
     Mat croppedImage;
     Rect croppedRectangle;
     bool cattura = false;
+    
+    bool controllaImmagini = false;
+    
     Find_Word FW = Find_Word();
     EyeDetector ED = EyeDetector();
     int visemeCode;
@@ -112,10 +115,10 @@ int lipTracking()
     //string synsetwords_path = "data\\viseme2\\synset_words.txt";
 
     //examples/viseme5 (con meno luce)
-    //string proto_path = "examples\\viseme5\\lenet.prototxt";
-    //string model_path = "examples\\viseme5\\viseme_snap_iter_150.caffemodel";
-    //string binaryproto_path = "data\\viseme3\\imagenet_mean.binaryproto";
-    //string synsetwords_path = "data\\viseme3\\synset_words.txt";
+    string proto_path = "examples\\viseme5\\lenet.prototxt";
+    string model_path = "examples\\viseme5\\viseme_snap_iter_150.caffemodel";
+    string binaryproto_path = "data\\viseme3\\imagenet_mean.binaryproto";
+    string synsetwords_path = "data\\viseme3\\synset_words.txt";
 
     ////examples/viseme6
     //string proto_path = "examples\\viseme6\\lenet.prototxt";
@@ -124,10 +127,10 @@ int lipTracking()
     //string synsetwords_path = "data\\viseme4\\synset_words.txt";
 
     //examples/viseme7 (con più luce)
-    string proto_path = "examples\\viseme7\\lenet.prototxt";
-    string model_path = "examples\\viseme7\\viseme_snap_iter_150.caffemodel";
-    string binaryproto_path = "data\\viseme5\\imagenet_mean.binaryproto";
-    string synsetwords_path = "data\\viseme5\\synset_words.txt";
+    //string proto_path = "examples\\viseme7\\lenet.prototxt";
+    //string model_path = "examples\\viseme7\\viseme_snap_iter_150.caffemodel";
+    //string binaryproto_path = "data\\viseme5\\imagenet_mean.binaryproto";
+    //string synsetwords_path = "data\\viseme5\\synset_words.txt";
     
     int photocount = 0; //initialize image counter
     String imagename;
@@ -194,17 +197,32 @@ int lipTracking()
                 
             }
         }
-                    if(cattura && framenumber % 8 == 0){
-                    photocount++; // increment image number for each capture
-                    imagename = "images/image" + inttostr(photocount) + ".JPEG";
-                    imwrite(imagename, croppedImage, compression_params);
-                    immagini.push_back("images\\image" + inttostr(photocount) + ".JPEG");
-                    //stampa le immagini da controllare
-                    for(int t=0;t<immagini.size();++t){
-                            cout<< "Eccolo->" << immagini.at(t) << endl;
-                    }
+        if(cattura && framenumber % 15 == 0 && controllaImmagini == false){
+            photocount++; // increment image number for each capture
+            imagename = "images/image" + inttostr(photocount) + ".JPEG";
+            imwrite(imagename, croppedImage, compression_params);
+            immagini.push_back("images\\image" + inttostr(photocount) + ".JPEG");
+            
+        }
                     //per ogni immagine dal classificare
-                    for(int t=0;t<immagini.size();++t){
+        
+        if(key == 'p'){
+            if(controllaImmagini==false){
+                //stampa le immagini da controllare
+                for(int t=0;t<immagini.size();++t){
+                        cout<< "Eccolo->" << immagini.at(t) << endl;
+                }
+                controllaImmagini = true;
+                cattura = false;
+            }
+            else
+                controllaImmagini = false;
+        }
+      
+            if(controllaImmagini){
+                    for(int t=0;t<immagini.size();++t)
+                    {
+                       
                         fstream file("result.txt", ios::out); //apre il file in scrittura (cancellando quello che già c'era)
                         if(!file) {
                             cout<<"Impossibile aprire file di output!";
@@ -236,7 +254,7 @@ int lipTracking()
                         //cout << endl;
                         for(int i=0; i< righe.capacity(); i++){
                             if(i==7){ //se sono al elemento 7, quindi la l'elemento dove c'è il risultato
-                                cout << i << " - " << righe[i] << endl;
+                                //cout << i << " - " << righe[i] << endl;
                                 //cout << righe[i] << endl;
                                 string s = righe[i];
                                 //cout << s << endl;
@@ -246,26 +264,30 @@ int lipTracking()
                                 printf("NUMBER=%d\n", n);
                                 //classified_visemes.push_back(n);
                                 FW.add_classified_visemes(n);
+                                cout << "ADD CLASSIFIED VISEME = " << n << endl; 
                             }
                         }
                         in.close();
                         file.close();
 
-                    }
+                    
+                        /*
                     for(int t=0;t<FW.size_classified_visemes();++t){
                             cout<<"CLASSIFIED_VISEME->" << t << " -> " << FW.x_element_classified_visemes(t) << endl;
                     }
+                    */
                     
-                    immagini.clear();
                     
                     //VISEMA CLASSIFICATO
                     visemeCode = FW.last_classified_visemes();
+                    //cout << "LAST CLASSIFIED = " << visemeCode << endl;
                     //visemeCode = classified_visemes.back(); // passo sempre l'ultimo visema classificato
                     /*
                     if((visemeCode==7 || visemeCode==5 || visemeCode==6) && FW.sizeVisemeList() >=5){ // er aggiustare il 7 finale, provare
                         visemeCode = 9;
                     }
                     */
+                    
                     completeWord = FW.addViseme(visemeCode);
                     cout << "COMPLETE_WORD= " << completeWord << endl;
                     
@@ -277,8 +299,9 @@ int lipTracking()
                         int fontFace = CV_FONT_ITALIC;
                         double fontScale = 1.5;
                         int thickness = 3;  
-                        cvPutText(result, "Attendere, ricerca parola in corso...", Point(20, 100), &font1, cvScalar(255, 0, 0, 0));
-                        cvShowImage("result", result);
+                        //cvPutText(result, "Attendere, ricerca parola in corso...", Point(20, 100), &font1, cvScalar(255, 0, 0, 0));
+                        //cvShowImage("result", result);
+                        cout << result << endl;
                         wordsFound.clear();
                         wordsFound = FW.searchWord();
                         if(wordsFound.size()==0)
@@ -359,14 +382,17 @@ int lipTracking()
                         //photocount = 0;
                         FW.clear_classified_visemes();
                         completeWord = false;
+                        immagini.clear();
                     }   
-                                
+                         }       
                     cout << imagename << " " << N_MIN << endl;
                     //f << imagename << " " << N_MIN << endl;
                     //namedWindow("result", WINDOW_AUTOSIZE );
                     //resizeWindow("result", 100, 100);
                     
                     //imshow("result", croppedImage);
+                    controllaImmagini = false;
+                    cattura = false;
                 }
         
         
